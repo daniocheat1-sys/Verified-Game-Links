@@ -72,3 +72,25 @@ footer {
     margin-top: 40px;
     border-top: 1px solid #444;
 }
+
+/* --- New Styles for Image Layout --- */
+
+/* 1. Make the card a Flex container to arrange contents side-by-side */
+.game-card {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+/* 2. Style the Image (The .game-cover class from your HTML) */
+.game-cover {
+    width: 100px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+}
+
+/* 3. Ensure the text container fills the remaining space */
+.info-container {
+    flex-grow: 1; 
+}
