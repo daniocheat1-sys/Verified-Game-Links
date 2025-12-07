@@ -31,6 +31,9 @@ header {
 }
 
 .game-card {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
     background-color: #333;
     padding: 20px;
     margin-bottom: 15px;
@@ -73,16 +76,7 @@ footer {
     border-top: 1px solid #444;
 }
 
-/* --- New Styles for Image Layout --- */
-
-/* 1. Make the card a Flex container to arrange contents side-by-side */
-.game-card {
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
-}
-
-/* 2. Style the Image (The .game-cover class from your HTML) */
+/* --- Image and Info Layout --- */
 .game-cover {
     width: 100px; 
     height: 120px; 
@@ -90,7 +84,19 @@ footer {
     border-radius: 4px; 
 }
 
-/* 3. Ensure the text container fills the remaining space */
 .info-container {
     flex-grow: 1; 
+}
+
+/* --- Responsive Mobile Styling --- */
+@media (max-width: 600px) {
+    .game-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .game-cover {
+        width: 80vw;
+        height: auto;
+        margin-bottom: 10px;
+    }
 }
